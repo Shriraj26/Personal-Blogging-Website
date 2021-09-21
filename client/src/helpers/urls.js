@@ -1,5 +1,5 @@
-const API_root = `https://blog-heroku-backend.herokuapp.com/api/v1`;
-const clientID = `372434750573-lbg96090ctq0k80pe33muknoe25kp9k6.apps.googleusercontent.com`;
+const API_root = process.ENV.API_ROOT;
+const clientID = process.ENV.GOOGLE_CLIENT_ID;
 
 export const API_URLS = {
   createBlog: () => `${API_root}/blogs/createblog`,
