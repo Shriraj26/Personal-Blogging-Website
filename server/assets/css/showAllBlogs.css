@@ -1,0 +1,48 @@
+
+
+
+/*Thing only shows 4 lines at a time!!!*/
+.text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4; /* number of lines to show */
+	-webkit-box-orient: vertical;
+ }
+
+.blog-container{
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	margin-top: 16px;
+	padding: 10px;
+	/* background-color: #FCF6F5FF; */
+	/* align-items: center; */
+	background-color: #F7F5C9;
+	/* border: 1px solid black; */
+	border-radius: 10px;
+	/* background-color: blueviolet; */
+}
+
+.blog-content-div{
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+
+
+
+.blog-img-div{
+	margin-right: 10px;
+	width: 130px;
+	height: 130px;
+}
+.blog-text-div{
+	width: 90%;
+}
+
+
+.readmore-div{
+	/* display: flex; */
+	/* justify-content: flex-start; */
+	margin-top: 10px;
+}

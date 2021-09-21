@@ -1,0 +1,117 @@
+To do - 
+Attributions- 
+<div>
+            Icons made by{" "}
+            <a href="https://www.freepik.com" title="Freepik">
+              Freepik
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
+
+Create Blogs request - 
+const url = 'http://localhost:8000/api/v1/blogs/createblog'
+fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A`,
+      },
+      body: JSON.stringify({
+        title: "Latest Latest Blogg",
+		content: "<h1>Oh ayeahsd</h1>",
+		desc: "blog Desc 5",
+		img: "blg-img",
+		type:"science",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+Edit Blog Request - 
+const url = 'http://localhost:8000/api/v1/blogs/editBlog/607ec60be9fd2f38ac1f80ae'
+fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A`,
+      },
+      body: JSON.stringify({
+        title: "ZZZZZ",
+        content: "<h1>jjgjgjg Blogg</h1>",
+        desc: "blog Desc",
+        img: "ddd-AA",
+        type: "history",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+	  
+Delete Blog - 
+const url =
+      "http://localhost:8000/api/v1/blogs/deleteblog/60800843f819a741c48c28ad";
+
+    fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A`,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+
+Get Blogs request with pagination - 
+const url = 'http://localhost:8000/api/v1/blogs?page=1&limit=10'
+fetch(url, {
+      method: "GET",
+      )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });	  
+
+Get Single Blog - 
+const url = "http://localhost:8000/api/v1/blogs/6080083ff819a741c48c28ac";
+    fetch(url, {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+	  
+Search with auth - it should not need auth but let it be as it is for now
+const url = "http://localhost:8000/api/v1/search/The%20New%20Beginning";
+    fetch(url, {
+      method: "GET",
+	  headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A`,
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+	  
+//These remain	  
+//like the blog
+# POST http://localhost:8000/api/v1/blogs/like?blogid=lskdfj&userid=ldfslknf HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A
+
+//comment the blog
+# POST http://localhost:8000/api/v1/blogs/comment?blogid=lskdfj&userid=ldfslknf HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A
+	  
+	  
+	  

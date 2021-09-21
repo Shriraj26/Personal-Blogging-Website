@@ -1,0 +1,51 @@
+
+	<link rel="stylesheet" href="/css/showAllBlogs.css">
+	
+	<div class="container">
+			<!-- <h1>Show All Blogs</h1> -->
+			<!-- <%= latestBlogs[0] %>  -->
+			<% const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %> 
+			
+			<% latestBlogs.forEach( (blog) => { %>
+				<% var date = new Date(blog.createdAt) %> 	
+				<% var d = date.getUTCDate() %> 
+				<% var m = date.getUTCMonth() %> 
+				<% var y = date.getUTCFullYear() %>
+				<div class="blog-container" id="blog-container-<%=blog._id %>">
+					<h2><%= blog.title %></h2>
+					<p><%= d + ' '+ monthNames[m] + ' ' + y   %></p>
+
+					<div class="blog-content-div">
+						<img class="blog-img-div" src=<%= blog.img %> alt="blog-img">
+						<!-- <div class="blog-img-div"> -->
+							<!-- <img src=<%= blog.img %> alt="blog-img"> -->
+						<!-- </div> -->
+						<div class="blog-text-div">
+							
+		
+							
+							
+							<p class="text"><%= blog.desc %>....</p>
+							<div class="readmore-div">
+								<a href="/blogs/viewBlog/<%= blog._id %>">
+									<button  class="btn">Read More</button>
+								</a>
+								
+								
+								<!-- If the admin is logged in then he can only view the edit and analytics -->
+								<% if(isAuthenticated){%> 
+									<a href="/blogs/editBlog/<%= blog._id %>">
+										<button  class="btn">Edit</button>
+									</a>
+									
+								<% } %> 
+								
+							</div>
+						</div>
+					</div>
+					
+				
+	
+				</div>
+			<% }) %> 
+		 </div> 

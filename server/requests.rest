@@ -1,0 +1,117 @@
+# //Get the blogs with Pagination
+//GET http://localhost:9000/api/v1/blogs?page=1&limit=10
+
+//Get the blog with single id
+//GET http://localhost:9000/api/v1/blogs/6082e05af3c28429040f8521
+
+//GEt blogs with blog type
+//GET http://localhost:9000/api/v1/blogs/type/history
+
+
+//Create Blog - do with auth
+# POST http://localhost:8000/api/v1/blogs/createblog HTTP/1.1
+# content-type: application/json
+
+# {
+#     "title": "new blog",
+#     "content": "<h1>New Bloggggg OGG</h1>",
+# 	"desc": "blog Desc",
+# 	"img": "blg-img",
+# 	"type":"history"
+# }
+
+# //Edit the blog request - do with auth
+# PUT http://localhost:8000/api/v1/blogs/editBlog/607ec60be9fd2f38ac1f80ae HTTP/1.1
+# content-type: application/json
+
+# {
+#     "title": "wdwdwdwd",
+#     "content": "<h1>jjgjgjg Blogg</h1>",
+# 	"desc": "blog Desc",
+# 	"img": "blg-img",
+# 	"type":"architecture"
+# }
+
+//delete the blog 
+# DELETE http://localhost:8000/api/v1/blogs/deleteblog/607ec5f27efd0e3b402b57cc HTTP/1.1
+# content-type: application/json
+
+//lOGIN THE uSER
+# POST http://localhost:9000/api/v1/users/create-session HTTP/1.1
+# Content-Type: application/x-www-form-urlencoded
+
+# email=abc@gmail.com
+# &password=abc
+
+
+
+//Request with Auth
+
+//Delete with auth
+# DELETE http://localhost:8000/api/v1/blogs/deleteblog/6080083ff819a741c48c28ac HTTP/1.1
+# content-type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE5MDgyMjg5LCJleHAiOjE2MTkyNTUwODl9.Am0rGgV9FjelJ6wQ3GAwrQ4ShkZ1PPj-DenK2O4vUxU
+
+//create with auth
+# POST http://localhost:9000/api/v1/blogs/createblog HTTP/1.1
+# content-type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE5MTkzODc1LCJleHAiOjE2MTkzNjY2NzV9.cHNsfvkH7rgOuz-Eh0Vf7nVrwPEZJfUdnzXf9fL729Q
+
+# {
+#     "title": "Temp blog a",
+#     "content": "<h1>New Bloggggg OGG</h1>",
+# 	"author":"The latest Temp Author",
+# 	"desc": "blog Desc",
+# 	"img": "blg-img",
+# 	"type":"history"
+# }
+
+# //Edit the blog request - do with auth
+# PUT http://localhost:8000/api/v1/blogs/editBlog/608140448792f7339c7deda5 HTTP/1.1
+# content-type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE5MDgyMjg5LCJleHAiOjE2MTkyNTUwODl9.Am0rGgV9FjelJ6wQ3GAwrQ4ShkZ1PPj-DenK2O4vUxU
+
+# {
+#     "title": "ccccsd",
+#     "content": "<h1>jjgjgjg Blogg</h1>",
+# 	"desc": "blog Desc",
+# 	"img": "ddd-AA",
+# 	"type":"history",
+# 	"author":"The changed One"
+	
+# }
+
+
+
+//search text
+//GET http://localhost:9000/api/v1/search/stalin HTTP/1.1
+
+
+
+
+//like the blog
+# POST http://localhost:8000/api/v1/blogs/like?blogid=lskdfj&userid=ldfslknf HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A
+
+//comment the blog
+# POST http://localhost:8000/api/v1/blogs/comment?blogid=lskdfj&userid=ldfslknf HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdkNWRmNDE5ZDVmYjEwZjRiNmYyMmIiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFiYyIsImNyZWF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDQtMTlUMTA6Mzk6NDguODcyWiIsIl9fdiI6MCwiaWF0IjoxNjE4OTM3Nzc4LCJleHAiOjE2MTkxMTA1Nzh9.j7St9UOOZXAVq05E3eHuN9_-hBApQ0ZkrCmtgNAtT0A
+
+
+
+//Comment on the blog
+//need blog id and author too
+
+# //create comment
+# POST https://blog-heroku-backend.herokuapp.com/api/v1/genUser/comment HTTP/1.1
+# content-type: application/json
+
+# {
+# 	"name": "test ninja",
+# 	"email": "test.ninja04@gmail.com",
+# 	"comment": "Comment 5",
+#   "blogID" : "608d06000db8f80015d04960"
+# }
+
+//get comments on a blog
+//GET http://localhost:9000/api/v1/genUser/getcomment/6082e05af3c28429040f8521 HTTP/1.1

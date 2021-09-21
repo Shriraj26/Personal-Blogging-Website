@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/blogform.css" />
+<div>
+  <h1>Add a New Blog</h1>
+  <form action="/blogs/createBlog" method="POST" class="blog-form">
+    <%- include('_blogform') %>
+    <button class="btn" type="submit">Submit</button>
+    <button class="btn" type="reset">Reset</button>
+  </form>
+  <a href="/blogs/allBlogs">
+    <button class="btn" type="" style="margin-top: 10px">Back to Blogs</button>
+  </a>
+</div>

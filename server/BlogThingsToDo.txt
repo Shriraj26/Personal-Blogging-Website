@@ -1,0 +1,53 @@
+1. Show all blogs - done
+2. Edit Blog - done
+3. New Blog - done
+4. Delete Blog
+5. Login/Logout - Admin things - done
+6. Navbar - search, with profile
+7. Footer
+8. Responsiveness
+9. UI design
+10. analytics
+11. Hosting
+12. Only specific mac addresses/ip addresses allowed to login
+
+API - 
+1. Create/Edit/Read/Update blog - done also with auth
+2. Comments/Likes on blog - after user auth google with react
+3. Search blogs - remaining - after react thing
+4. Analytics/Admin Dashboard - Remaining
+
+
+need dashboard for signed in user so that he can edit/delete/add blogs
+
+will not have button to login/signup just have 2 links for login and signup
+
+First - nodeJS
+Then - make an API
+
+
+if logged in then dont go to login again
+
+
+
+
+
+
+
+
+
+//Store the credentials in the local storage, 
+//store the token in store
+//everytime u create/delete/edit the blog, check with existing token, if failed, then send with
+//the credentials then get a new token and store it again.
+//also have a logic to get the token destroyed.
+
+//Where auth is req
+//1. Login User - no signin as signin we will implement in the DB
+//2. Create post 
+//3. Edit post
+//4. Delete post
+
+//where auth is not req
+//1. View one Blog
+//2. View Blogs with pagination

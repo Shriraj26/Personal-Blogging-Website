@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "MyCursiveFont";
+  src: url("./Sacramento-Regular.ttf");
+}
+
+.navbar {
+  height: 4em;
+  border-bottom: 1px solid lightgrey;
+  /* padding: 16px 26px; */
+  padding: 0px 16px 0px 16px;
+  justify-content: space-between;
+  /* width: 100vw; */
+}
+
+.logo-div {
+  width: 33.33%;
+}
+
+.logo-font {
+  font-family: "MyCursiveFont";
+  color: brown;
+
+  /* width: 10px; */
+  /* font-size: 40px; */
+}
+/* .search-results-box {
+  width: 300px;
+} */
+.navbar-imgs {
+  width: 30px;
+  flex-grow: 1;
+}
+
+.navbar-user-img {
+  border-radius: 50%;
+  /* border: 2px solid red; */
+}
+
+.navbar-home-link {
+  margin-left: 26px;
+  cursor: pointer;
+}
+
+.input-container-div {
+  width: 33.33%;
+
+  position: relative;
+}
+
+.input-container {
+  /* border: 1px solid black; */
+  /* border-radius: 20px; */
+  width: 400px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  background-color: #f8f8f8;
+  /* border-bottom: 1px solid black; */
+}
+.search-input {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  width: 80%;
+  font-size: 20px;
+  margin-left: 20px;
+  /* padding-right: 20px; */
+  background-color: #f8f8f8;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.search-ul {
+  list-style-type: none;
+}
+
+.search-li {
+  /* margin-top: 2px; */
+  border-bottom: 1px solid lightgray;
+}
+.search-li:hover {
+  background-color: white;
+  transform: scale(1.01);
+  transition: 0.3s ease-in-out;
+}
+.search-results {
+  width: 400px;
+  /* border: 1px solid black; */
+  background-color: #f8f8f8;
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+}
+.search-result-text {
+  margin-left: 10px;
+}
+.search-img {
+  width: 80px;
+  /* border-radius: 10px; */
+}
+
+#left {
+  margin-left: 10px;
+}
+
+#right {
+  margin-right: 10px;
+}
+
+.img-size {
+  font-size: 20px;
+  flex-grow: 1;
+  color: #ff765b;
+
+  /* margin-top: 5px; */
+  /* padding: 10px; */
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.navbar-icons-div {
+  width: 33.33%;
+  position: relative;
+}
+
+.navbar-user-profile {
+  position: relative;
+}
+.login-div {
+  position: absolute;
+  right: 70px;
+  top: 31px;
+}
+
+.google-logo {
+  width: 25px;
+  margin-right: 5px;
+}
+
+/***Media Queries **************************************************/
+
+@media screen and (max-width: 409px) {
+  .input-container {
+    width: 125px !important;
+    height: 30px !important;
+  }
+  #contact-link {
+    display: none;
+  }
+  .login-div {
+    /* position: absolute; */
+    right: 14px !important;
+    /* top: 31px; */
+    /* width: 160px !important; */
+  }
+  .navbar-home-link {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-div {
+    /* position: absolute; */
+    right: 48px;
+    /* top: 31px; */
+    /* width: 160px !important; */
+  }
+  .logo-font {
+    font-size: 1.5em;
+  }
+  .input-container {
+    width: 125px;
+    height: 25px;
+  }
+  .navbar-imgs {
+    width: 25px;
+  }
+  .navbar-home-link {
+    margin-left: 10px;
+  }
+  #left {
+    margin-left: 5px;
+  }
+
+  .search-input {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  .img-size {
+    font-size: 15px;
+  }
+
+  .search-results {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .input-container {
+    width: 200px;
+    /* height: 25px; */
+  }
+
+  .navbar-home-link {
+    margin-left: 10px;
+  }
+}

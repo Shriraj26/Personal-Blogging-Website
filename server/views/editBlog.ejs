@@ -1,0 +1,15 @@
+
+		<div class="container">
+			<h1>eDIT a New Blog</h1>
+			<form action="/blogs/saveEditedBlog" method="POST" class="blog-form">
+				<%- include('_blogform') %>
+				<input type="hidden" value=<%=blog._id%> name="_id">
+				<button class="btn" type="Save">Submit</button>
+			
+			</form>	
+			
+			<a href="/blogs/allBlogs" >
+				<button class="btn" type="" style="margin-top: 10px;">Back to Blogs</button>
+			</a>
+		</div>
+	

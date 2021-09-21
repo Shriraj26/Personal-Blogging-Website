@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/blogform.css" />
+<label for="title"><b>Title</b></label
+><br />
+<input
+  type="text"
+  name="title"
+  id=""
+  placeholder="Type Title Here"
+  required
+  class="blog-input input-text-size"
+  value="<%= blog.title %>"
+/><br />
+
+<label for="author"><b>Author</b></label
+><br />
+<input
+  type="text"
+  name="author"
+  id=""
+  placeholder="Type author Here"
+  required
+  class="blog-input input-text-size"
+  value="<%= blog.author %>"
+/><br />
+
+<label for="desc"><b>Describe</b></label
+><br />
+<textarea
+  class="blog-input input-text-size"
+  name="desc"
+  placeholder="Describe Here"
+>
+<%= blog.desc %></textarea
+><br />
+
+<label for="type" required><b>Blog Type</b></label
+><br />
+<select class="blog-input input-text-size" id="type" name="type">
+  <!-- We define the variables to set the default select option according to the blog -->
+  <% var ahis, aarch, asci, afas = '' %> <% if(blog.type === 'history'){ahis =
+  'selected'}%> <% if(blog.type === 'architecture'){aarch = 'selected'}%> <%
+  if(blog.type === 'science'){asci = 'selected'}%> <% if(blog.type ===
+  'fashion'){afas = 'selected'}%>
+  <option value="history" <%="ahis" %>>History</option>
+  <option value="architecture" <%="aarch" %>>Architecture</option>
+  <option value="science" <%="asci" %>>Science</option>
+  <option value="fashion" <%="afas" %>>Fashion</option></select
+><br />
+
+<label for="img"><b>Link for Image</b></label
+><br />
+<input
+  class="blog-input input-text-size"
+  type="text"
+  name="img"
+  id=""
+  placeholder="Link for the blog image... Make sure they are square"
+  value="<%= blog.img %>"
+/>
+<br />
+
+<label for="content"><b>Content</b></label
+><br />
+<textarea
+  class="blog-input blog-content input-text-size"
+  required
+  placeholder="Blog Content..."
+  name="content"
+>
+<%= blog.content %></textarea
+><br />

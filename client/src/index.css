@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* line-height: 1.2; */
+}
+
+.share-icons-div {
+  margin-top: 56px;
+}
+.share-icons {
+  margin-right: 10px;
+}
+.share-icons:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.flex-div {
+  display: flex;
+}
+.row-div {
+  flex-direction: row;
+}
+.col-div {
+  flex-direction: column;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.border-test-div {
+  border: 1px solid black;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.active {
+  display: block;
+}
+.disabled {
+  display: none;
+}
+
+/*This will limit the number of lines to the one u give*/
+.limit-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  display: -webkit-box;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.limit-4-lines {
+  -webkit-line-clamp: 4;
+}
+.limit-2-lines {
+  -webkit-line-clamp: 2;
+}
+
+/*Capital letters*/
+.capital {
+  text-transform: uppercase;
+}
+
+/*Button */
+.btn {
+  background-color: #ffffff;
+  outline: none;
+  /* border: none; */
+  border: 0.5px solid green;
+  font-size: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: ivory;
+}

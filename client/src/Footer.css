@@ -1,0 +1,19 @@
+.footer {
+  height: 4em;
+  padding: 16px;
+  border-top: 1px solid lightgray;
+}
+
+.footer h1 {
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 10px;
+    height: 2em;
+  }
+  .footer h1 {
+    font-size: medium;
+  }
+}
