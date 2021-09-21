@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 //Connect to the DB
 
 const uri =
-  "mongodb+srv://blogAdmin:MyPersonalBlog963@cluster0.ocfjz.mongodb.net/blogDB?retryWrites=true&w=majority";
+  process.ENV.MONGO_URI;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
